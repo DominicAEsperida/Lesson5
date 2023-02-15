@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Javascript</title> 
+        <script language="Javascript" type="text/javascript">
+            function changeToGreen(){
+                document.getElementById("task1").className = "green";
+            }
+            function checkAge(){
+                var age = document.myForm.age.value;
+                alert(age > 65);
+            }
+            function multiply(){
+                var n1 = document.calculator.n1.value;
+                var n2 = document.calculator.n2.value;
+                document.getElementById("output").innerHTML = n1 * n2;
+            }
+            function divide(){
+                var n1 = document.calculator.n1.value;
+                var n2 = document.calculator.n2.value;
+                document.getElementById("output").innerHTML = n1 / n2;
+            }
+            function add(){
+                var n1 = document.calculator.n1.value;
+                var n2 = document.calculator.n2.value;
+                document.getElementById("output").innerHTML = Number(n1) + Number(n2);
+            }
+            function subtract(){
+                var n1 = document.calculator.n1.value;
+                var n2 = document.calculator.n2.value;
+                document.getElementById("output").innerHTML = n1 - n2;
+            }
+        </script>
+        <style>
+            .green{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="task1">Task 1</h1>
+        <button onclick="changeToGreen()">Green</button>
+        <hr>
+        <h1>Task 2</h1>
+        <form name="myForm">
+            <input type="number" name="age">
+            <input type="button" value="Check" onclick="checkAge()">
+        </form>
+        <hr>
+        <h1>Task 3</h1>
+        <form name="calculator">
+            <input type="number" name="n1">
+            <input type="number" name="n2">
+            <input type="button" value="Multiply" onclick="multiply()">
+            <input type="button" value="Divide" onclick="divide()">
+            <input type="button" value="Addition" onclick="add()">
+            <input type="button" value="Subtraction" onclick="subtract()">
+        </form>
+        <h3>Output: </h3>
+        <p id="output"></p>
+    </body>
+</html>
